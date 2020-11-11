@@ -1,0 +1,35 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.container {
+  min-width: 200px;
+  width: 80%;
+  margin: auto;
+  padding: 40px;
+}
+
+textarea,
+.preview {
+  display: block;
+  width: 100%;
+  height: 76vh;
+  box-shadow: rgba(8, 9, 10, 0.1) 0px 0px 0px 1px;
+  background-color: #fff;
+  padding: 12px;
+  border: none;
+  resize: none;
+}
+
+input[type="submit"] {
+  border-radius: 2px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-right: 2px;
+  padding: 0.5em 1.2em 0.37em;
+  letter-spacing: 1.35px;
+  margin: 12px 0;
+  border: 1px solid rgb(21, 129, 186);
+  background: rgb(21, 129, 186);
+  color: rgb(255, 255, 255);
+}

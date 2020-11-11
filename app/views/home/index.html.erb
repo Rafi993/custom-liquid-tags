@@ -1,0 +1,10 @@
+<div class="container">
+  <%= form_with(url: "/preview", method: "post", local: true) do %>
+  <textarea
+    name="text"
+    placeholder="Write your content here"
+    autofocus
+  ></textarea>
+  <input type="submit" value="Preview" />
+  <% end %>
+</div>
