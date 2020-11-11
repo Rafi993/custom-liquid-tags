@@ -3,8 +3,8 @@ class HomeController < ApplicationController
   end
 
   def preview
-    @parsed_html = "<h1>Hello</h1>"
-    
+    @template = Liquid::Template.parse(params[:text])
+    @parsed_html = @template.render()
     render "preview"
   end
 end
