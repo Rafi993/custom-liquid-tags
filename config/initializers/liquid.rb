@@ -1,13 +1,10 @@
 Rails.application.config.to_prepare do
-  # Explicitly requiring lib/liquid to make sure that our patches are loaded
-  # before liquid tags are loaded
+  # Tags to disable
   Dir.glob(Rails.root.join("lib/liquid/*.rb")).sort.each do |filename|
     require_dependency filename
   end
 
-  # Our custom Liquid tags are registered to Liquid::Template at the bottom of
-  # each files. Each Liquid tags will need to be loaded/required before the main
-  # Liquid gem is evoked, hence the need to pre-require them in order
+  # Custom Liquid tags are loaded here
   Dir.glob(Rails.root.join("app/liquid_tags/*.rb")).sort.each do |filename|
     require_dependency filename
   end
