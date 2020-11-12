@@ -4,7 +4,6 @@ class LiquidTagBase < Liquid::Tag
   end
 
   def initialize(_tag_name, _content, parse_context)
-    @links = []
     super
   end
 end
